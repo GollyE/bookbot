@@ -12,3 +12,13 @@ def char_dict(input_text):
             character_dict[letter] = 1
     return character_dict
 
+def sort_on(dict):
+    return dict["num"]
+
+def sorted_list_dict(character_count_dict):
+    s_list = []
+    for key in character_count_dict:
+        s_list.append({"key":key, "num": character_count_dict[key]})
+    s_list.sort(reverse=True, key=sort_on)
+    return s_list
+
