@@ -10,6 +10,9 @@ def main():
     #print(sys.argv[0])
     #print(sys.argv[1])
     #book_path = "books/frankenstein.txt"
+    if len(sys.argv) < 2:
+        print("Error, Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
     book_path = sys.argv[1]
     contents = get_book_text(book_path)
     words_in_book = word_count(contents)
